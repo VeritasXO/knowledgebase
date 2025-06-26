@@ -1,0 +1,38 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug with TSX",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "tsx",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "args": ["server/index.ts"],
+      "outFiles": ["${workspaceFolder}/server/**/*.ts"],
+      "sourceMaps": true,
+      "smartStep": true,
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    },
+    {
+      "name": "Debug Current File",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "tsx",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "program": "${file}",
+      "outFiles": ["${workspaceFolder}/server/**/*.ts"],
+      "sourceMaps": true,
+      "smartStep": true,
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    }
+  ]
+}
